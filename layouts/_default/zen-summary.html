@@ -1,13 +1,7 @@
 <a class="flex justify-between items-center gap-4" href="{{ .RelPermalink }}">
   <div>
     <h2 class="text-lg font-medium underline">{{ .Title }}</h2>
-    <span class="date text-base-content/60 text-sm">
-    {{ if site.Params.Experimental.jsDate }}
-      <span data-format="luxon">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</span>
-    {{ else }}
-      {{ .Date | time.Format "Monday, Jan 2, 2006" }}
-    {{ end }}
-    </span>
+    
   </div>
 
   {{ if .Params.cover }}
