@@ -1,6 +1,6 @@
 {{ if site.Config.Services.Disqus.Shortname }}
 <article>
-  {{ partial "disqus.html" (dict "Context" . "Identifier" .RelPermalink) }}
+  {{ partial (dict "Context" . "Identifier" .RelPermalink) }}
 </article>
 {{ end }}
 
