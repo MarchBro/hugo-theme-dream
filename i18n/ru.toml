@@ -11,16 +11,16 @@ other = "Повернуть!"
 other = "Архивы"
 
 [allTags]
-other = "Все теги"
+other = "Услуги"
 
 [tag]
-one = "1 тег"
-few = "{{ .Count }} тега"
-many = "{{ .Count }} тегов"
-other = "{{ .Count }} тегов"
+one = "1 услуга"
+few = "{{ .Count }} услуги"
+many = "{{ .Count }} услуг"
+other = "{{ .Count }} услуг"
 
 [allCategories]
-other = "Все категории"
+other = "Категории"
 
 [category]
 one = "1 категория"
@@ -29,19 +29,19 @@ many = "{{ .Count }} категорий"
 other = "{{ .Count }} категорий"
 
 [article]
-one = "1 статья"
-few = "{{ .Count }} статьи"
-many = "{{ .Count }} статей"
-other = "{{ .Count }} статей"
+one = "1 материал"
+few = "{{ .Count }} материалы"
+many = "{{ .Count }} материалов"
+other = "{{ .Count }} материалов"
 
 [socialLinks]
 other = "Социальные сети"
 
 [minuteRead]
-one = " минута чтения"
-few = " минуты чтения"
-many = " минут чтения"
-other = " минут чтения"
+one = " минута ознакомления"
+few = " минуты ознакомления"
+many = " минут ознакомления"
+other = " минут ознакомления"
 
 [updatedAt]
 other = "Обновлено"
