@@ -41,7 +41,7 @@
     {{ $paginator := .Paginate .Pages }}
 
     {{ if site.Params.zenMode }}
-      <div class="dream-zen-posts px-4 space-y-8">
+      <div class="dream-zen-uslugi px-4 space-y-8">
         {{ range $paginator.Pages }}
           {{ .Render "zen-summary" }}
         {{ end }}

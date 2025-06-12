@@ -11,7 +11,7 @@
 {{ end }}
 x-data="{
   search: '',
-  get posts() { return this.search !== '' ? window.fuse.search(this.search) : [] },
+  get uslugi() { return this.search !== '' ? window.fuse.search(this.search) : [] },
 }">
   <label for="search" class="input w-full">
     <input id="search" name="search" type="text" class="grow" placeholder="{{ T "search" }}" x-model.debounce="search" />
@@ -19,7 +19,7 @@ x-data="{
   </label>
 
   <div class="mt-8 space-y-4">
-  <template x-for="post in posts">
+  <template x-for="post in uslugi">
     <a class="card bg-base-100 hover:bg-base-content/10 cursor-pointer border border-base-content/30" :href="post.item.url">
       <div class="card-body">
         <h2 class="card-title" x-text="post.item.title"></h2>
@@ -64,7 +64,7 @@ x-data="{
 {{ define "js" }}
 
 {{ $data := slice }}
-{{ range (where site.RegularPages "Type" "posts") }}
+{{ range (where site.RegularPages "Type" "uslugi") }}
 {{ $data = $data | append (dict "title" .Title "url" .RelPermalink "author" .Params.author "avatar" .Params.avatar "categories" .Params.categories "tags" .Params.tags "description" (or .Description (.Summary | emojify | safeHTML)) "readingTime" .ReadingTime) }}
 {{ end }}
 
