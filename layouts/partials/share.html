@@ -4,16 +4,14 @@
     {{ partial "post-share-left.html" . }}
   {{ end }}
 
-  {{ $shares := slice "x" "facebook" "whatsapp" }}
+  {{ $shares := slice "paper-plane" "logo-whatsapp" }}
   {{ $shareTitles := dict
-    "x" "X"
     "facebook" "Facebook"
     "whatsapp" "WhatsApp"
   }}
   {{ $shareLinks := dict
-    "x" (print "https://x.com/intent/post?text=" .Title "&url=" .Permalink)
-    "facebook" (print "https://facebook.com/sharer/sharer.php?u=" .Permalink)
-    "whatsapp" (print "https://wa.me/?text=" .Title " " .Permalink)
+    "paper-plane" (print "https://t.me/Maks_svarka?text=" .Permalink)
+    "logo-whatsapp" (print "https://wa.me/79495102777?text=" .Title " " .Permalink)
   }}
   {{ if site.Params.reorderShares }}
     {{ $shares = site.Params.reorderShares }}
@@ -22,7 +20,7 @@
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
       href="{{ index $shareLinks . }}" target="_blank" rel="noopener noreferrer"
       title="Share on {{ index $shareTitles . }}">
-      <ion-icon class="group-hover:text-primary-content" name="logo-{{ . }}"></ion-icon>
+      <ion-icon class="group-hover:text-primary-content" name="{{ . }}"></ion-icon>
     </a>
   {{ end }}
 
