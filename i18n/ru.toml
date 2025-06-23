@@ -29,10 +29,10 @@ many = "{{ .Count }} категорий"
 other = "{{ .Count }} категорий"
 
 [article]
-one = "1 материал"
-few = "{{ .Count }} материалы"
-many = "{{ .Count }} материалов"
-other = "{{ .Count }} материалов"
+one = "1 услуга"
+few = "{{ .Count }} услуги"
+many = "{{ .Count }} услуг"
+other = "{{ .Count }} услуг"
 
 [socialLinks]
 other = "Социальные сети"
